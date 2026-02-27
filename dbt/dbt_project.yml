@@ -1,0 +1,37 @@
+# name of dbt project
+#best practice: lowercase with underscore for better readbility
+
+name: 'customer_order_tracking'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'customer_order_tracking'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+docs-paths: ["docs"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+# model configuration
+models:
+  customer_order_tracking:
+    +persist_docs: ['relation' , 'columns']
+    staging:
+      +schema: staging
+    intermediate:
+      +schema: intermediate
+    mart:
+      +schema: mart
+    access_views:
+      +schema: access_views

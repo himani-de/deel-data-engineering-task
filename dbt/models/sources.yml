@@ -1,0 +1,67 @@
+version: 2
+sources:
+  - name: customer_orders
+    database: finance_db
+    schema: operations
+    tables:
+      - name: products
+        loaded_at_field: updated_at
+        freshness:
+          warn_after: { count: 1, period: day }
+          error_after: { count: 2, period: day }
+        columns:
+          - name: product_id
+          - name: product_name
+          - name: barcode
+          - name: unity_price
+          - name: is_active
+          - name: updated_at
+          - name: updated_by
+          - name: created_at
+          - name: created_by
+
+      - name: customers
+        loaded_at_field: updated_at
+        freshness:
+          warn_after: { count: 1, period: day }
+          error_after: { count: 2, period: day }
+        columns:
+          - name: customer_id
+          - name: customer_name
+          - name: is_active
+          - name: customer_address
+          - name: updated_at
+          - name: updated_by
+          - name: created_at
+          - name: created_by
+
+      - name: orders
+        loaded_at_field: updated_at
+        freshness:
+          warn_after: { count: 1, period: day }
+          error_after: { count: 2, period: day }
+        columns:
+          - name: order_id
+          - name: order_date
+          - name: delivery_date
+          - name: customer_id
+          - name: status
+          - name: updated_at
+          - name: updated_by
+          - name: created_at
+          - name: created_by
+
+      - name: order_items
+        loaded_at_field: updated_at
+        freshness:
+          warn_after: { count: 1, period: day }
+          error_after: { count: 2, period: day }
+        columns:
+          - name: order_item_id
+          - name: order_id
+          - name: product_id
+          - name: quantity
+          - name: updated_at
+          - name: updated_by
+          - name: created_at
+          - name: created_by

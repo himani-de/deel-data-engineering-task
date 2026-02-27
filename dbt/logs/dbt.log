@@ -1,0 +1,635 @@
+[0m22:44:27.935342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11185d2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118e0d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118e12d0>]}
+
+
+============================== 22:44:27.942900 | 52dadf60-ff0c-4f02-9511-f44b5f6847d7 ==============================
+[0m22:44:27.942900 [info ] [MainThread]: Running with dbt=1.9.1
+[0m22:44:27.943829 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/himani/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt source freshness', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:44:27.944698 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:44:27.957551 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": false, "command_wall_clock_time": 0.11680013, "process_in_blocks": "0", "process_kernel_time": 0.377047, "process_mem_max_rss": "96514048", "process_out_blocks": "0", "process_user_time": 1.507569}
+[0m22:44:27.958433 [debug] [MainThread]: Command `dbt source freshness` failed at 22:44:27.958298 after 0.12 seconds
+[0m22:44:27.958885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111854850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111857410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111857d90>]}
+[0m22:44:27.959302 [debug] [MainThread]: Flushing usage events
+[0m22:44:28.553983 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:02:51.132968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc0f610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1106d8cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1106d9250>]}
+
+
+============================== 23:02:51.139621 | a615a6ab-d5b5-480c-aa4c-43dbd74a8bb9 ==============================
+[0m23:02:51.139621 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:02:51.140305 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/himani/.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt source freshness', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:02:51.141138 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:02:51.144417 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": false, "command_wall_clock_time": 0.09953868, "process_in_blocks": "0", "process_kernel_time": 0.355659, "process_mem_max_rss": "97353728", "process_out_blocks": "0", "process_user_time": 1.507604}
+[0m23:02:51.145110 [debug] [MainThread]: Command `dbt source freshness` failed at 23:02:51.144975 after 0.10 seconds
+[0m23:02:51.145780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110655690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1106b3350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11064f4d0>]}
+[0m23:02:51.146239 [debug] [MainThread]: Flushing usage events
+[0m23:02:51.728387 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:03:37.685643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112206610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112290e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112291410>]}
+
+
+============================== 23:03:37.693057 | ab85ad9b-2683-4533-92e6-5e8f927e23e6 ==============================
+[0m23:03:37.693057 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:03:37.693777 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/himani/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt source freshness', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:03:37.694369 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:03:37.697683 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": false, "command_wall_clock_time": 0.0927113, "process_in_blocks": "0", "process_kernel_time": 0.320287, "process_mem_max_rss": "96727040", "process_out_blocks": "0", "process_user_time": 1.501469}
+[0m23:03:37.698368 [debug] [MainThread]: Command `dbt source freshness` failed at 23:03:37.698236 after 0.09 seconds
+[0m23:03:37.698800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112204a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112204f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112207590>]}
+[0m23:03:37.699200 [debug] [MainThread]: Flushing usage events
+[0m23:03:38.232548 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:05:16.362445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d139e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc87110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcacb90>]}
+
+
+============================== 23:05:16.369700 | c0a49811-b7f8-471f-b163-dda4674bc2e8 ==============================
+[0m23:05:16.369700 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:05:16.370453 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/himani/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:05:16.391644 [info ] [MainThread]: dbt version: 1.9.1
+[0m23:05:16.392111 [info ] [MainThread]: python version: 3.11.14
+[0m23:05:16.392704 [info ] [MainThread]: python path: /Users/himani/PycharmProjects/deel-data-engineering-task/venv/bin/python3
+[0m23:05:16.393215 [info ] [MainThread]: os info: macOS-26.2-x86_64-i386-64bit
+[0m23:05:16.535662 [info ] [MainThread]: Using profiles dir at /Users/himani/.dbt
+[0m23:05:16.536231 [info ] [MainThread]: Using profiles.yml file at /Users/himani/.dbt/profiles.yml
+[0m23:05:16.536543 [info ] [MainThread]: Using dbt_project.yml file at /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml
+[0m23:05:16.536909 [info ] [MainThread]: Configuration:
+[0m23:05:16.537233 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m23:05:16.537563 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:05:16.537831 [info ] [MainThread]: Required dependencies:
+[0m23:05:16.538268 [debug] [MainThread]: Executing "git --help"
+[0m23:05:16.553723 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:05:16.554748 [debug] [MainThread]: STDERR: "b''"
+[0m23:05:16.555134 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:05:16.555499 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m23:05:16.555939 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m23:05:16.556237 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "customer_order_tracking", target "dev" invalid: 1234 is not of type 'string'
+
+
+[0m23:05:16.556542 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml> not found
+
+[0m23:05:16.561761 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.27856869, "process_in_blocks": "0", "process_kernel_time": 0.363047, "process_mem_max_rss": "99930112", "process_out_blocks": "0", "process_user_time": 1.564366}
+[0m23:05:16.562587 [debug] [MainThread]: Command `dbt debug` failed at 23:05:16.562451 after 0.28 seconds
+[0m23:05:16.563183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109543d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc53510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095e0110>]}
+[0m23:05:16.563670 [debug] [MainThread]: Flushing usage events
+[0m23:05:17.138239 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:05:59.966053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11019f050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11019de10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110202b50>]}
+
+
+============================== 23:05:59.973653 | afcd7e1b-1cda-452b-b3c4-3e82f82fe5c7 ==============================
+[0m23:05:59.973653 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:05:59.974310 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/himani/.dbt', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:05:59.995744 [info ] [MainThread]: dbt version: 1.9.1
+[0m23:05:59.996267 [info ] [MainThread]: python version: 3.11.14
+[0m23:05:59.996822 [info ] [MainThread]: python path: /Users/himani/PycharmProjects/deel-data-engineering-task/venv/bin/python3
+[0m23:05:59.997212 [info ] [MainThread]: os info: macOS-26.2-x86_64-i386-64bit
+[0m23:06:00.113354 [info ] [MainThread]: Using profiles dir at /Users/himani/.dbt
+[0m23:06:00.114013 [info ] [MainThread]: Using profiles.yml file at /Users/himani/.dbt/profiles.yml
+[0m23:06:00.114457 [info ] [MainThread]: Using dbt_project.yml file at /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml
+[0m23:06:00.264047 [info ] [MainThread]: Configuration:
+[0m23:06:00.264576 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m23:06:00.264968 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:06:00.265408 [info ] [MainThread]: Required dependencies:
+[0m23:06:00.265867 [debug] [MainThread]: Executing "git --help"
+[0m23:06:00.290445 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:06:00.291844 [debug] [MainThread]: STDERR: "b''"
+[0m23:06:00.292304 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:06:00.292894 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m23:06:00.293465 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:06:00.294010 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "customer_order_tracking", target "dev" invalid: 1234 is not of type 'string'
+
+
+[0m23:06:00.298987 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.41698056, "process_in_blocks": "0", "process_kernel_time": 0.357618, "process_mem_max_rss": "102383616", "process_out_blocks": "0", "process_user_time": 1.722139}
+[0m23:06:00.300279 [debug] [MainThread]: Command `dbt debug` failed at 23:06:00.300010 after 0.42 seconds
+[0m23:06:00.301232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1101fb150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110383910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb90990>]}
+[0m23:06:00.301910 [debug] [MainThread]: Flushing usage events
+[0m23:06:00.818491 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:08:08.009657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105852f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058ae010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058b7a90>]}
+
+
+============================== 23:08:08.015981 | 72f26a90-1780-4c1c-afa5-fd472b167c33 ==============================
+[0m23:08:08.015981 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:08:08.016642 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/himani/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:08:08.039330 [info ] [MainThread]: dbt version: 1.9.1
+[0m23:08:08.039937 [info ] [MainThread]: python version: 3.11.14
+[0m23:08:08.040383 [info ] [MainThread]: python path: /Users/himani/PycharmProjects/deel-data-engineering-task/venv/bin/python3
+[0m23:08:08.040783 [info ] [MainThread]: os info: macOS-26.2-x86_64-i386-64bit
+[0m23:08:08.132824 [info ] [MainThread]: Using profiles dir at /Users/himani/.dbt
+[0m23:08:08.133345 [info ] [MainThread]: Using profiles.yml file at /Users/himani/.dbt/profiles.yml
+[0m23:08:08.133650 [info ] [MainThread]: Using dbt_project.yml file at /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml
+[0m23:08:08.135397 [info ] [MainThread]: adapter type: postgres
+[0m23:08:08.135985 [info ] [MainThread]: adapter version: 1.9.1
+[0m23:08:08.236715 [info ] [MainThread]: Configuration:
+[0m23:08:08.237154 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:08:08.237505 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:08:08.237791 [info ] [MainThread]: Required dependencies:
+[0m23:08:08.238214 [debug] [MainThread]: Executing "git --help"
+[0m23:08:08.254683 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:08:08.255676 [debug] [MainThread]: STDERR: "b''"
+[0m23:08:08.256099 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:08:08.256441 [info ] [MainThread]: Connection:
+[0m23:08:08.256864 [info ] [MainThread]:   host: localhost
+[0m23:08:08.257157 [info ] [MainThread]:   port: 5432
+[0m23:08:08.257441 [info ] [MainThread]:   user: finance_db_user
+[0m23:08:08.257727 [info ] [MainThread]:   database: finanace_db
+[0m23:08:08.257997 [info ] [MainThread]:   schema: dev
+[0m23:08:08.258267 [info ] [MainThread]:   connect_timeout: 10
+[0m23:08:08.258540 [info ] [MainThread]:   role: None
+[0m23:08:08.258813 [info ] [MainThread]:   search_path: None
+[0m23:08:08.259089 [info ] [MainThread]:   keepalives_idle: 60
+[0m23:08:08.259531 [info ] [MainThread]:   sslmode: prefer
+[0m23:08:08.260044 [info ] [MainThread]:   sslcert: None
+[0m23:08:08.260354 [info ] [MainThread]:   sslkey: None
+[0m23:08:08.260651 [info ] [MainThread]:   sslrootcert: None
+[0m23:08:08.260971 [info ] [MainThread]:   application_name: customer_order_tracking
+[0m23:08:08.261403 [info ] [MainThread]:   retries: 3
+[0m23:08:08.262202 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:08:08.400066 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:08:08.477419 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:08:08.477846 [debug] [MainThread]: On debug: select 1 as id
+[0m23:08:08.478174 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:08:08.549559 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+3 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "finanace_db" does not exist
+
+[0m23:08:08.567893 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+2 attempts remaining. Retrying in 1 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "finanace_db" does not exist
+
+[0m23:08:09.609690 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 4 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "finanace_db" does not exist
+
+[0m23:08:13.657209 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m23:08:13.657980 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m23:08:13.658497 [debug] [MainThread]: On debug: No close available on handle
+[0m23:08:13.659008 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:08:13.659613 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:08:13.660065 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "finanace_db" does not exist
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:08:13.664111 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 5.735285, "process_in_blocks": "0", "process_kernel_time": 0.473084, "process_mem_max_rss": "113008640", "process_out_blocks": "0", "process_user_time": 1.795924}
+[0m23:08:13.664883 [debug] [MainThread]: Command `dbt debug` failed at 23:08:13.664720 after 5.74 seconds
+[0m23:08:13.665397 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:08:13.665847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058d4850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058d4f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a504d0>]}
+[0m23:08:13.666388 [debug] [MainThread]: Flushing usage events
+[0m23:08:14.247900 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:08:48.742751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0c0790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a128150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a12bfd0>]}
+
+
+============================== 23:08:48.750690 | 1bb29026-be2c-417d-a0b9-5d2e9c6cb8cc ==============================
+[0m23:08:48.750690 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:08:48.751427 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/himani/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:08:48.773885 [info ] [MainThread]: dbt version: 1.9.1
+[0m23:08:48.774480 [info ] [MainThread]: python version: 3.11.14
+[0m23:08:48.774854 [info ] [MainThread]: python path: /Users/himani/PycharmProjects/deel-data-engineering-task/venv/bin/python3
+[0m23:08:48.775164 [info ] [MainThread]: os info: macOS-26.2-x86_64-i386-64bit
+[0m23:08:48.870820 [info ] [MainThread]: Using profiles dir at /Users/himani/.dbt
+[0m23:08:48.871416 [info ] [MainThread]: Using profiles.yml file at /Users/himani/.dbt/profiles.yml
+[0m23:08:48.871830 [info ] [MainThread]: Using dbt_project.yml file at /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/dbt_project.yml
+[0m23:08:48.872813 [info ] [MainThread]: adapter type: postgres
+[0m23:08:48.873276 [info ] [MainThread]: adapter version: 1.9.1
+[0m23:08:48.973025 [info ] [MainThread]: Configuration:
+[0m23:08:48.973571 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:08:48.973901 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:08:48.974209 [info ] [MainThread]: Required dependencies:
+[0m23:08:48.974586 [debug] [MainThread]: Executing "git --help"
+[0m23:08:49.008500 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:08:49.009482 [debug] [MainThread]: STDERR: "b''"
+[0m23:08:49.009892 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:08:49.010303 [info ] [MainThread]: Connection:
+[0m23:08:49.010706 [info ] [MainThread]:   host: localhost
+[0m23:08:49.011042 [info ] [MainThread]:   port: 5432
+[0m23:08:49.011379 [info ] [MainThread]:   user: finance_db_user
+[0m23:08:49.011802 [info ] [MainThread]:   database: finance_db
+[0m23:08:49.012072 [info ] [MainThread]:   schema: dev
+[0m23:08:49.012334 [info ] [MainThread]:   connect_timeout: 10
+[0m23:08:49.012600 [info ] [MainThread]:   role: None
+[0m23:08:49.012869 [info ] [MainThread]:   search_path: None
+[0m23:08:49.013149 [info ] [MainThread]:   keepalives_idle: 60
+[0m23:08:49.013410 [info ] [MainThread]:   sslmode: prefer
+[0m23:08:49.013667 [info ] [MainThread]:   sslcert: None
+[0m23:08:49.013923 [info ] [MainThread]:   sslkey: None
+[0m23:08:49.014182 [info ] [MainThread]:   sslrootcert: None
+[0m23:08:49.014445 [info ] [MainThread]:   application_name: customer_order_tracking
+[0m23:08:49.014702 [info ] [MainThread]:   retries: 3
+[0m23:08:49.015284 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:08:49.131432 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:08:49.183941 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:08:49.184395 [debug] [MainThread]: On debug: select 1 as id
+[0m23:08:49.184711 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:08:49.259313 [debug] [MainThread]: SQL status: SELECT 1 in 0.075 seconds
+[0m23:08:49.260406 [debug] [MainThread]: On debug: Close
+[0m23:08:49.260797 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:08:49.261207 [info ] [MainThread]: [32mAll checks passed![0m
+[0m23:08:49.265332 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.6085483, "process_in_blocks": "0", "process_kernel_time": 0.464822, "process_mem_max_rss": "112324608", "process_out_blocks": "0", "process_user_time": 1.770644}
+[0m23:08:49.266132 [debug] [MainThread]: Command `dbt debug` succeeded at 23:08:49.265965 after 0.61 seconds
+[0m23:08:49.266679 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:08:49.267136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a37d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a12be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a6b4f90>]}
+[0m23:08:49.267671 [debug] [MainThread]: Flushing usage events
+[0m23:08:49.809391 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:09:01.338666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d6f690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d64d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104de9390>]}
+
+
+============================== 23:09:01.344040 | 3743bb17-702b-4986-aa19-cb47400f2728 ==============================
+[0m23:09:01.344040 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:09:01.344677 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/himani/.dbt', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt source freshness', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:09:01.532450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3743bb17-702b-4986-aa19-cb47400f2728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1025a45d0>]}
+[0m23:09:01.590884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3743bb17-702b-4986-aa19-cb47400f2728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10233ab90>]}
+[0m23:09:01.592909 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:09:01.715528 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m23:09:01.716459 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:09:01.716886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3743bb17-702b-4986-aa19-cb47400f2728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054deb90>]}
+[0m23:09:02.532659 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 5 unused configuration paths:
+- models.customer_order_tracking
+- models.customer_order_tracking.mart
+- models.customer_order_tracking.intermediate
+- models.customer_order_tracking.staging
+- models.customer_order_tracking.access_views
+[0m23:09:02.606569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3743bb17-702b-4986-aa19-cb47400f2728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103080610>]}
+[0m23:09:02.661274 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:09:02.680792 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:09:02.712519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3743bb17-702b-4986-aa19-cb47400f2728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10532d310>]}
+[0m23:09:02.713059 [info ] [MainThread]: Found 4 sources, 434 macros
+[0m23:09:02.713431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3743bb17-702b-4986-aa19-cb47400f2728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104dba150>]}
+[0m23:09:02.715432 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:09:02.734656 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:09:02.736667 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:09:02.739614 [debug] [MainThread]: Wrote artifact FreshnessResult to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/sources.json
+[0m23:09:02.740016 [info ] [MainThread]: Done.
+[0m23:09:02.744015 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": true, "command_wall_clock_time": 1.4790282, "process_in_blocks": "0", "process_kernel_time": 0.352549, "process_mem_max_rss": "109686784", "process_out_blocks": "0", "process_user_time": 2.752607}
+[0m23:09:02.744626 [debug] [MainThread]: Command `dbt source freshness` succeeded at 23:09:02.744511 after 1.48 seconds
+[0m23:09:02.745349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100724290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b817d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb11d0>]}
+[0m23:09:02.746035 [debug] [MainThread]: Flushing usage events
+[0m23:09:03.271031 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:09:18.643437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10adf4b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae5add0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae3d150>]}
+
+
+============================== 23:09:18.648483 | 4005b273-8738-4080-9d97-306c648dfc06 ==============================
+[0m23:09:18.648483 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:09:18.649087 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/himani/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt source freshness', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:09:18.818743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4005b273-8738-4080-9d97-306c648dfc06', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3f1d10>]}
+[0m23:09:18.876855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4005b273-8738-4080-9d97-306c648dfc06', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083cb4d0>]}
+[0m23:09:18.877834 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:09:18.985196 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m23:09:19.092529 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:09:19.092996 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:09:19.093680 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 5 unused configuration paths:
+- models.customer_order_tracking.access_views
+- models.customer_order_tracking.staging
+- models.customer_order_tracking.mart
+- models.customer_order_tracking.intermediate
+- models.customer_order_tracking
+[0m23:09:19.108289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4005b273-8738-4080-9d97-306c648dfc06', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc71450>]}
+[0m23:09:19.166313 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:09:19.175322 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:09:19.189415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4005b273-8738-4080-9d97-306c648dfc06', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bdf3d50>]}
+[0m23:09:19.189948 [info ] [MainThread]: Found 4 sources, 434 macros
+[0m23:09:19.190286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4005b273-8738-4080-9d97-306c648dfc06', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc54d10>]}
+[0m23:09:19.192166 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:09:19.211797 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:09:19.213889 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:09:19.216674 [debug] [MainThread]: Wrote artifact FreshnessResult to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/sources.json
+[0m23:09:19.217030 [info ] [MainThread]: Done.
+[0m23:09:19.220676 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": true, "command_wall_clock_time": 0.65891105, "process_in_blocks": "0", "process_kernel_time": 0.287313, "process_mem_max_rss": "109703168", "process_out_blocks": "0", "process_user_time": 1.82769}
+[0m23:09:19.221325 [debug] [MainThread]: Command `dbt source freshness` succeeded at 23:09:19.221207 after 0.66 seconds
+[0m23:09:19.221790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa16650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067b89d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067b81d0>]}
+[0m23:09:19.222161 [debug] [MainThread]: Flushing usage events
+[0m23:09:19.736134 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:11:26.775671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e2f690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e2c450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ea9090>]}
+
+
+============================== 23:11:26.782075 | 937a21c4-c23a-41dc-a506-ba54567bc28b ==============================
+[0m23:11:26.782075 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:11:26.782681 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'version_check': 'True', 'profiles_dir': '/Users/himani/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt source freshness', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:11:26.996932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '937a21c4-c23a-41dc-a506-ba54567bc28b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106665dd0>]}
+[0m23:11:27.055860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '937a21c4-c23a-41dc-a506-ba54567bc28b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063fb250>]}
+[0m23:11:27.057369 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:11:27.176971 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m23:11:27.296361 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:11:27.297206 [debug] [MainThread]: Partial parsing: updated file: customer_order_tracking://models/sources.yml
+[0m23:11:27.453445 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 5 unused configuration paths:
+- models.customer_order_tracking.access_views
+- models.customer_order_tracking.intermediate
+- models.customer_order_tracking.staging
+- models.customer_order_tracking
+- models.customer_order_tracking.mart
+[0m23:11:27.468000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '937a21c4-c23a-41dc-a506-ba54567bc28b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d6e510>]}
+[0m23:11:27.522787 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:11:27.538055 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:11:27.568172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '937a21c4-c23a-41dc-a506-ba54567bc28b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f45f10>]}
+[0m23:11:27.568694 [info ] [MainThread]: Found 4 sources, 434 macros
+[0m23:11:27.569044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '937a21c4-c23a-41dc-a506-ba54567bc28b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e23190>]}
+[0m23:11:27.570700 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:11:27.592237 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:11:27.594035 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:11:27.597390 [debug] [MainThread]: Wrote artifact FreshnessResult to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/sources.json
+[0m23:11:27.597905 [info ] [MainThread]: Done.
+[0m23:11:27.601276 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": true, "command_wall_clock_time": 0.9118239, "process_in_blocks": "0", "process_kernel_time": 0.442397, "process_mem_max_rss": "112115712", "process_out_blocks": "0", "process_user_time": 2.119173}
+[0m23:11:27.601992 [debug] [MainThread]: Command `dbt source freshness` succeeded at 23:11:27.601849 after 0.91 seconds
+[0m23:11:27.602556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e50d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e91790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080c7490>]}
+[0m23:11:27.603085 [debug] [MainThread]: Flushing usage events
+[0m23:11:28.153439 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:14:03.731185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055bd250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057763d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057da150>]}
+
+
+============================== 23:14:03.736249 | 0a17764a-7218-42d0-82bb-d1ead8a85c79 ==============================
+[0m23:14:03.736249 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:14:03.736907 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/himani/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt source freshness', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:14:03.922490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0a17764a-7218-42d0-82bb-d1ead8a85c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cb0650>]}
+[0m23:14:03.983397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0a17764a-7218-42d0-82bb-d1ead8a85c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d86d50>]}
+[0m23:14:03.984435 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:14:04.094068 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m23:14:04.182942 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:14:04.183734 [debug] [MainThread]: Partial parsing: updated file: customer_order_tracking://models/sources.yml
+[0m23:14:04.344109 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 5 unused configuration paths:
+- models.customer_order_tracking
+- models.customer_order_tracking.staging
+- models.customer_order_tracking.access_views
+- models.customer_order_tracking.mart
+- models.customer_order_tracking.intermediate
+[0m23:14:04.357793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0a17764a-7218-42d0-82bb-d1ead8a85c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f20350>]}
+[0m23:14:04.411784 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:14:04.421603 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:14:04.435743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0a17764a-7218-42d0-82bb-d1ead8a85c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10688a790>]}
+[0m23:14:04.436265 [info ] [MainThread]: Found 4 sources, 434 macros
+[0m23:14:04.436608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0a17764a-7218-42d0-82bb-d1ead8a85c79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067091d0>]}
+[0m23:14:04.438306 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m23:14:04.458303 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:14:04.460416 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:14:04.463924 [debug] [MainThread]: Wrote artifact FreshnessResult to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/sources.json
+[0m23:14:04.464392 [info ] [MainThread]: Done.
+[0m23:14:04.467695 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": true, "command_wall_clock_time": 0.8176753, "process_in_blocks": "0", "process_kernel_time": 0.311565, "process_mem_max_rss": "112504832", "process_out_blocks": "0", "process_user_time": 2.035271}
+[0m23:14:04.468428 [debug] [MainThread]: Command `dbt source freshness` succeeded at 23:14:04.468287 after 0.82 seconds
+[0m23:14:04.468886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101170c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101170310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10577d9d0>]}
+[0m23:14:04.469278 [debug] [MainThread]: Flushing usage events
+[0m23:14:05.021807 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:14:53.366009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10524f590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052d0ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052d1050>]}
+
+
+============================== 23:14:53.372297 | 5280b28f-61c6-49f8-b9f6-2739c8be0b17 ==============================
+[0m23:14:53.372297 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:14:53.372977 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/himani/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt source freshness', 'send_anonymous_usage_stats': 'True'}
+[0m23:14:53.579088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5280b28f-61c6-49f8-b9f6-2739c8be0b17', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057cda10>]}
+[0m23:14:53.638288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5280b28f-61c6-49f8-b9f6-2739c8be0b17', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10285a7d0>]}
+[0m23:14:53.640245 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m23:14:53.762898 [debug] [MainThread]: checksum: 5e8d1596cf4eae33c11286bbb248a722d21b9f00d8a7ced8137c642517055418, vars: {}, profile: , target: , version: 1.9.1
+[0m23:14:53.881846 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m23:14:53.882677 [debug] [MainThread]: Partial parsing: updated file: customer_order_tracking://models/sources.yml
+[0m23:14:54.045021 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 5 unused configuration paths:
+- models.customer_order_tracking.intermediate
+- models.customer_order_tracking.staging
+- models.customer_order_tracking.mart
+- models.customer_order_tracking.access_views
+- models.customer_order_tracking
+[0m23:14:54.058378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5280b28f-61c6-49f8-b9f6-2739c8be0b17', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10531d590>]}
+[0m23:14:54.110132 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:14:54.125972 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:14:54.154012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5280b28f-61c6-49f8-b9f6-2739c8be0b17', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106356ad0>]}
+[0m23:14:54.154535 [info ] [MainThread]: Found 4 sources, 434 macros
+[0m23:14:54.154873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5280b28f-61c6-49f8-b9f6-2739c8be0b17', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062ed9d0>]}
+[0m23:14:54.156803 [info ] [MainThread]: 
+[0m23:14:54.157231 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:14:54.157524 [info ] [MainThread]: 
+[0m23:14:54.158118 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:14:54.219517 [debug] [MainThread]: Using postgres connection "master"
+[0m23:14:54.219956 [debug] [MainThread]: On master: BEGIN
+[0m23:14:54.220308 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:14:54.288595 [debug] [MainThread]: SQL status: BEGIN in 0.068 seconds
+[0m23:14:54.289132 [debug] [MainThread]: Using postgres connection "master"
+[0m23:14:54.289550 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "customer_order_tracking", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m23:14:54.323375 [debug] [MainThread]: SQL status: SELECT 0 in 0.033 seconds
+[0m23:14:54.324736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5280b28f-61c6-49f8-b9f6-2739c8be0b17', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060a6a50>]}
+[0m23:14:54.325260 [debug] [MainThread]: On master: ROLLBACK
+[0m23:14:54.327414 [debug] [MainThread]: Using postgres connection "master"
+[0m23:14:54.327747 [debug] [MainThread]: On master: BEGIN
+[0m23:14:54.330376 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m23:14:54.330892 [debug] [MainThread]: On master: COMMIT
+[0m23:14:54.331236 [debug] [MainThread]: Using postgres connection "master"
+[0m23:14:54.331522 [debug] [MainThread]: On master: COMMIT
+[0m23:14:54.332983 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:14:54.333373 [debug] [MainThread]: On master: Close
+[0m23:14:54.335160 [debug] [Thread-1 (]: Began running node source.customer_order_tracking.customer_orders.customers
+[0m23:14:54.335576 [debug] [Thread-2 (]: Began running node source.customer_order_tracking.customer_orders.order_items
+[0m23:14:54.335956 [debug] [Thread-3 (]: Began running node source.customer_order_tracking.customer_orders.orders
+[0m23:14:54.336334 [debug] [Thread-4 (]: Began running node source.customer_order_tracking.customer_orders.products
+[0m23:14:54.336751 [info ] [Thread-1 (]: 1 of 4 START freshness of customer_orders.customers ............................ [RUN]
+[0m23:14:54.337499 [info ] [Thread-2 (]: 2 of 4 START freshness of customer_orders.order_items .......................... [RUN]
+[0m23:14:54.338008 [info ] [Thread-3 (]: 3 of 4 START freshness of customer_orders.orders ............................... [RUN]
+[0m23:14:54.338457 [info ] [Thread-4 (]: 4 of 4 START freshness of customer_orders.products ............................. [RUN]
+[0m23:14:54.339025 [debug] [Thread-1 (]: Acquiring new postgres connection 'source.customer_order_tracking.customer_orders.customers'
+[0m23:14:54.339515 [debug] [Thread-2 (]: Acquiring new postgres connection 'source.customer_order_tracking.customer_orders.order_items'
+[0m23:14:54.340016 [debug] [Thread-3 (]: Acquiring new postgres connection 'source.customer_order_tracking.customer_orders.orders'
+[0m23:14:54.340515 [debug] [Thread-4 (]: Acquiring new postgres connection 'source.customer_order_tracking.customer_orders.products'
+[0m23:14:54.341103 [debug] [Thread-1 (]: Began compiling node source.customer_order_tracking.customer_orders.customers
+[0m23:14:54.341468 [debug] [Thread-2 (]: Began compiling node source.customer_order_tracking.customer_orders.order_items
+[0m23:14:54.341847 [debug] [Thread-3 (]: Began compiling node source.customer_order_tracking.customer_orders.orders
+[0m23:14:54.342224 [debug] [Thread-4 (]: Began compiling node source.customer_order_tracking.customer_orders.products
+[0m23:14:54.342622 [debug] [Thread-1 (]: Began executing node source.customer_order_tracking.customer_orders.customers
+[0m23:14:54.342982 [debug] [Thread-2 (]: Began executing node source.customer_order_tracking.customer_orders.order_items
+[0m23:14:54.343330 [debug] [Thread-3 (]: Began executing node source.customer_order_tracking.customer_orders.orders
+[0m23:14:54.343695 [debug] [Thread-4 (]: Began executing node source.customer_order_tracking.customer_orders.products
+[0m23:14:54.344267 [debug] [Thread-1 (]: Using postgres connection "source.customer_order_tracking.customer_orders.customers"
+[0m23:14:54.344800 [debug] [Thread-2 (]: Using postgres connection "source.customer_order_tracking.customer_orders.order_items"
+[0m23:14:54.345336 [debug] [Thread-3 (]: Using postgres connection "source.customer_order_tracking.customer_orders.orders"
+[0m23:14:54.345903 [debug] [Thread-4 (]: Using postgres connection "source.customer_order_tracking.customer_orders.products"
+[0m23:14:54.346292 [debug] [Thread-1 (]: On source.customer_order_tracking.customer_orders.customers: BEGIN
+[0m23:14:54.346640 [debug] [Thread-2 (]: On source.customer_order_tracking.customer_orders.order_items: BEGIN
+[0m23:14:54.347006 [debug] [Thread-3 (]: On source.customer_order_tracking.customer_orders.orders: BEGIN
+[0m23:14:54.347349 [debug] [Thread-4 (]: On source.customer_order_tracking.customer_orders.products: BEGIN
+[0m23:14:54.347704 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:14:54.348053 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:14:54.348428 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m23:14:54.348781 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m23:14:54.384486 [debug] [Thread-4 (]: SQL status: BEGIN in 0.036 seconds
+[0m23:14:54.385069 [debug] [Thread-2 (]: SQL status: BEGIN in 0.037 seconds
+[0m23:14:54.385769 [debug] [Thread-4 (]: On source.customer_order_tracking.customer_orders.products: COMMIT
+[0m23:14:54.386451 [debug] [Thread-2 (]: On source.customer_order_tracking.customer_orders.order_items: COMMIT
+[0m23:14:54.386920 [debug] [Thread-4 (]: Using postgres connection "source.customer_order_tracking.customer_orders.products"
+[0m23:14:54.387419 [debug] [Thread-2 (]: Using postgres connection "source.customer_order_tracking.customer_orders.order_items"
+[0m23:14:54.387868 [debug] [Thread-4 (]: On source.customer_order_tracking.customer_orders.products: COMMIT
+[0m23:14:54.388690 [debug] [Thread-2 (]: On source.customer_order_tracking.customer_orders.order_items: COMMIT
+[0m23:14:54.390706 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m23:14:54.391267 [debug] [Thread-1 (]: SQL status: BEGIN in 0.043 seconds
+[0m23:14:54.391705 [debug] [Thread-3 (]: SQL status: BEGIN in 0.043 seconds
+[0m23:14:54.392095 [debug] [Thread-2 (]: SQL status: COMMIT in 0.003 seconds
+[0m23:14:54.399662 [debug] [Thread-4 (]: Using postgres connection "source.customer_order_tracking.customer_orders.products"
+[0m23:14:54.400143 [debug] [Thread-1 (]: On source.customer_order_tracking.customer_orders.customers: COMMIT
+[0m23:14:54.400519 [debug] [Thread-3 (]: On source.customer_order_tracking.customer_orders.orders: COMMIT
+[0m23:14:54.402511 [debug] [Thread-2 (]: Using postgres connection "source.customer_order_tracking.customer_orders.order_items"
+[0m23:14:54.402895 [debug] [Thread-4 (]: On source.customer_order_tracking.customer_orders.products: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "customer_order_tracking", "target_name": "dev", "node_id": "source.customer_order_tracking.customer_orders.products"} */
+select
+      max(updated_at) as max_loaded_at,
+      now() as snapshotted_at
+    from "finance_db"."operations"."products"
+    
+  
+[0m23:14:54.403266 [debug] [Thread-1 (]: Using postgres connection "source.customer_order_tracking.customer_orders.customers"
+[0m23:14:54.403644 [debug] [Thread-3 (]: Using postgres connection "source.customer_order_tracking.customer_orders.orders"
+[0m23:14:54.404004 [debug] [Thread-2 (]: On source.customer_order_tracking.customer_orders.order_items: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "customer_order_tracking", "target_name": "dev", "node_id": "source.customer_order_tracking.customer_orders.order_items"} */
+select
+      max(updated_at) as max_loaded_at,
+      now() as snapshotted_at
+    from "finance_db"."operations"."order_items"
+    
+  
+[0m23:14:54.404410 [debug] [Thread-1 (]: On source.customer_order_tracking.customer_orders.customers: COMMIT
+[0m23:14:54.404731 [debug] [Thread-3 (]: On source.customer_order_tracking.customer_orders.orders: COMMIT
+[0m23:14:54.406421 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m23:14:54.406872 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m23:14:54.409642 [debug] [Thread-1 (]: Using postgres connection "source.customer_order_tracking.customer_orders.customers"
+[0m23:14:54.412387 [debug] [Thread-3 (]: Using postgres connection "source.customer_order_tracking.customer_orders.orders"
+[0m23:14:54.413024 [debug] [Thread-1 (]: On source.customer_order_tracking.customer_orders.customers: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "customer_order_tracking", "target_name": "dev", "node_id": "source.customer_order_tracking.customer_orders.customers"} */
+select
+      max(updated_at) as max_loaded_at,
+      now() as snapshotted_at
+    from "finance_db"."operations"."customers"
+    
+  
+[0m23:14:54.413560 [debug] [Thread-3 (]: On source.customer_order_tracking.customer_orders.orders: /* {"app": "dbt", "dbt_version": "1.9.1", "profile_name": "customer_order_tracking", "target_name": "dev", "node_id": "source.customer_order_tracking.customer_orders.orders"} */
+select
+      max(updated_at) as max_loaded_at,
+      now() as snapshotted_at
+    from "finance_db"."operations"."orders"
+    
+  
+[0m23:14:54.414044 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m23:14:54.416078 [debug] [Thread-4 (]: On source.customer_order_tracking.customer_orders.products: Close
+[0m23:14:54.418151 [info ] [Thread-4 (]: 4 of 4 PASS freshness of customer_orders.products .............................. [[32mPASS[0m in 0.08s]
+[0m23:14:54.418826 [debug] [Thread-4 (]: Finished running node source.customer_order_tracking.customer_orders.products
+[0m23:14:54.421156 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m23:14:54.422805 [debug] [Thread-2 (]: On source.customer_order_tracking.customer_orders.order_items: Close
+[0m23:14:54.423696 [info ] [Thread-2 (]: 2 of 4 PASS freshness of customer_orders.order_items ........................... [[32mPASS[0m in 0.08s]
+[0m23:14:54.424416 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m23:14:54.425217 [debug] [Thread-2 (]: Finished running node source.customer_order_tracking.customer_orders.order_items
+[0m23:14:54.425832 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m23:14:54.427369 [debug] [Thread-3 (]: On source.customer_order_tracking.customer_orders.orders: Close
+[0m23:14:54.429050 [debug] [Thread-1 (]: On source.customer_order_tracking.customer_orders.customers: Close
+[0m23:14:54.429825 [info ] [Thread-3 (]: 3 of 4 PASS freshness of customer_orders.orders ................................ [[32mPASS[0m in 0.09s]
+[0m23:14:54.430583 [info ] [Thread-1 (]: 1 of 4 PASS freshness of customer_orders.customers ............................. [[32mPASS[0m in 0.09s]
+[0m23:14:54.431275 [debug] [Thread-3 (]: Finished running node source.customer_order_tracking.customer_orders.orders
+[0m23:14:54.431836 [debug] [Thread-1 (]: Finished running node source.customer_order_tracking.customer_orders.customers
+[0m23:14:54.434028 [debug] [MainThread]: Using postgres connection "master"
+[0m23:14:54.434576 [debug] [MainThread]: On master: BEGIN
+[0m23:14:54.434893 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:14:54.458469 [debug] [MainThread]: SQL status: BEGIN in 0.023 seconds
+[0m23:14:54.459354 [debug] [MainThread]: On master: COMMIT
+[0m23:14:54.459715 [debug] [MainThread]: Using postgres connection "master"
+[0m23:14:54.460002 [debug] [MainThread]: On master: COMMIT
+[0m23:14:54.461496 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m23:14:54.461829 [debug] [MainThread]: On master: Close
+[0m23:14:54.462269 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:14:54.462570 [debug] [MainThread]: Connection 'source.customer_order_tracking.customer_orders.customers' was properly closed.
+[0m23:14:54.462841 [debug] [MainThread]: Connection 'source.customer_order_tracking.customer_orders.order_items' was properly closed.
+[0m23:14:54.463100 [debug] [MainThread]: Connection 'source.customer_order_tracking.customer_orders.orders' was properly closed.
+[0m23:14:54.463351 [debug] [MainThread]: Connection 'source.customer_order_tracking.customer_orders.products' was properly closed.
+[0m23:14:54.463675 [info ] [MainThread]: 
+[0m23:14:54.464024 [info ] [MainThread]: Finished running 4 sources in 0 hours 0 minutes and 0.31 seconds (0.31s).
+[0m23:14:54.538002 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/manifest.json
+[0m23:14:54.539885 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/semantic_manifest.json
+[0m23:14:54.544610 [debug] [MainThread]: Wrote artifact FreshnessResult to /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/target/sources.json
+[0m23:14:54.545005 [info ] [MainThread]: Done.
+[0m23:14:54.547919 [debug] [MainThread]: Resource report: {"command_name": "freshness", "command_success": true, "command_wall_clock_time": 1.2674174, "process_in_blocks": "0", "process_kernel_time": 0.491097, "process_mem_max_rss": "121163776", "process_out_blocks": "0", "process_user_time": 2.328809}
+[0m23:14:54.548458 [debug] [MainThread]: Command `dbt source freshness` succeeded at 23:14:54.548348 after 1.27 seconds
+[0m23:14:54.549050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f478d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100c40c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10449d350>]}
+[0m23:14:54.549495 [debug] [MainThread]: Flushing usage events
+[0m23:14:55.076821 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:16:48.846731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f104510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f106c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f167f90>]}
+
+
+============================== 23:16:48.853963 | 9a7d86f3-c1b1-4ee8-b6e9-d1ccc5740415 ==============================
+[0m23:16:48.853963 [info ] [MainThread]: Running with dbt=1.9.1
+[0m23:16:48.854613 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/himani/PycharmProjects/deel-data-engineering-task/dbt/logs', 'profiles_dir': '/Users/himani/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:16:48.994191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9a7d86f3-c1b1-4ee8-b6e9-d1ccc5740415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f1e0d90>]}
+[0m23:16:49.025140 [debug] [MainThread]: Set downloads directory='/var/folders/bp/fsy_hgjs37b9n9_mbh6q8p6m0000gn/T/dbt-downloads-2e86mt6s'
+[0m23:16:49.025714 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m23:16:49.163697 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m23:16:49.168120 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m23:16:49.227892 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m23:16:49.246670 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m23:16:49.556698 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m23:16:49.584229 [info ] [MainThread]: Updating lock file in file path: /Users/himani/PycharmProjects/deel-data-engineering-task/dbt/package-lock.yml
+[0m23:16:49.586955 [debug] [MainThread]: Set downloads directory='/var/folders/bp/fsy_hgjs37b9n9_mbh6q8p6m0000gn/T/dbt-downloads-8ggiq2qc'
+[0m23:16:49.593997 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m23:16:49.927187 [info ] [MainThread]: Installed from version 0.9.6
+[0m23:16:49.928161 [info ] [MainThread]: Updated version available: 1.3.3
+[0m23:16:49.929158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9a7d86f3-c1b1-4ee8-b6e9-d1ccc5740415', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e590c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db30910>]}
+[0m23:16:49.929932 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m23:16:50.151754 [info ] [MainThread]: Installed from version 0.10.0
+[0m23:16:50.152332 [info ] [MainThread]: Updated version available: 0.14.0
+[0m23:16:50.152803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9a7d86f3-c1b1-4ee8-b6e9-d1ccc5740415', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f167490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f1ba5d0>]}
+[0m23:16:50.153340 [info ] [MainThread]: 
+[0m23:16:50.153744 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils', 'dbt-labs/codegen']                 
+Update your versions in packages.yml, then run dbt deps
+[0m23:16:50.157528 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.3991296, "process_in_blocks": "0", "process_kernel_time": 0.461179, "process_mem_max_rss": "105132032", "process_out_blocks": "0", "process_user_time": 1.819418}
+[0m23:16:50.158137 [debug] [MainThread]: Command `dbt deps` succeeded at 23:16:50.158019 after 1.40 seconds
+[0m23:16:50.158518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10abd6e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ab10090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ab10990>]}
+[0m23:16:50.158922 [debug] [MainThread]: Flushing usage events
+[0m23:16:50.740620 [debug] [MainThread]: An error was encountered while trying to flush usage events
