@@ -1,3 +1,7 @@
+# if the source stops updating for >2–4 hours, you get notified immediately
+# Data must be available and ready to consume as soon as possible
+# the freshness time frame is adjustable as per sue case
+
 version: 2
 sources:
   - name: customer_orders
@@ -7,8 +11,8 @@ sources:
       - name: products
         loaded_at_field: updated_at
         freshness:
-          warn_after: { count: 1, period: day }
-          error_after: { count: 2, period: day }
+          warn_after: { count: 2, period: hour }
+          error_after: { count: 4, period: hour }
         columns:
           - name: product_id
           - name: product_name
@@ -23,8 +27,8 @@ sources:
       - name: customers
         loaded_at_field: updated_at
         freshness:
-          warn_after: { count: 1, period: day }
-          error_after: { count: 2, period: day }
+          warn_after: { count: 2, period: hour }
+          error_after: { count: 4, period: hour }
         columns:
           - name: customer_id
           - name: customer_name
@@ -38,8 +42,8 @@ sources:
       - name: orders
         loaded_at_field: updated_at
         freshness:
-          warn_after: { count: 1, period: day }
-          error_after: { count: 2, period: day }
+          warn_after: { count: 2, period: hour }
+          error_after: { count: 4, period: hour }
         columns:
           - name: order_id
           - name: order_date
@@ -54,8 +58,8 @@ sources:
       - name: order_items
         loaded_at_field: updated_at
         freshness:
-          warn_after: { count: 1, period: day }
-          error_after: { count: 2, period: day }
+          warn_after: { count: 2, period: hour }
+          error_after: { count: 4, period: hour }
         columns:
           - name: order_item_id
           - name: order_id
