@@ -9,6 +9,8 @@
 {{
     config(
         materialized="incremental",
+        incremental_strategy="merge",
+        unique_key="customer_id",
         tags=["staging"]
     )
 }}
@@ -48,7 +50,8 @@ dedup_customers as (
             *,
             row_number() over (
                 partition by customer_id
-                order by updated_at desc
+                order by updated_at desc nulls last,
+                dbt_loaded_at desc
             ) as rn
         from raw_customers
     ) c

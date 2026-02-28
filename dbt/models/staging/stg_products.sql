@@ -9,6 +9,8 @@
 {{
     config(
         materialized="incremental",
+        incremental_strategy="merge",
+        unique_key="product_id",
         tags=["staging"]
     )
 }}
@@ -49,7 +51,8 @@ dedup_products as (
             *,
             row_number() over (
                 partition by product_id
-                order by updated_at desc
+                order by updated_at desc nulls last,
+                dbt_loaded_at desc
             ) as rn
         from raw_products
     ) p

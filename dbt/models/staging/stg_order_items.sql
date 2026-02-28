@@ -9,6 +9,8 @@
 {{
     config(
         materialized="incremental",
+        incremental_strategy="merge",
+        unique_key="order_item_id",
         tags=["staging"]
     )
 }}
@@ -48,7 +50,8 @@ dedup_order_items as (
             *,
             row_number() over (
                 partition by order_item_id
-                order by updated_at desc
+                order by updated_at desc nulls last,
+                dbt_loaded_at desc
             ) as rn
         from raw_order_items
     ) oi
