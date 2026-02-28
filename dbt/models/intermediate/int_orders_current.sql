@@ -8,7 +8,7 @@
 {{
     config(
         materialized="view",
-        tags=["incremental", "view", "order"]
+        tags=["intermediate", "view", "order"]
     )
 }}
 

@@ -1,0 +1,109 @@
+version: 2
+
+models:
+
+  # ==================================================================================
+  # INT_ORDERS_CURRENT
+  # ==================================================================================
+  - name: int_orders_current
+    description: >
+      Intermediate model representing the latest operational state of customer orders.
+    columns:
+      - name: order_id
+        description: Unique identifier for the order.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Identifier linking the order to the customer placing it.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: order_date
+        description: Date when the order was created in the operational system.
+        tests:
+          - not_null
+      - name: delivery_date
+        description: Scheduled delivery date of the order for operational reporting.
+      - name: order_status
+        description: Operational status of the order as captured in the source system.
+        tests:
+          - not_null
+      - name: order_status_category
+        description: Normalized status category derived via `order_status_fields()` macro.
+      - name: is_completed
+        description: Boolean flag indicating whether the order is completed.
+      - name: is_pending
+        description: Boolean flag indicating whether the order is pending.
+      - name: is_processing
+        description: Boolean flag indicating whether the order is currently being processed.
+      - name: updated_at
+        description: Timestamp of the most recent update in the staging table.
+      - name: updated_by
+        description: Identifier of the user or system that last updated the order.
+      - name: created_at
+        description: Timestamp when the order was originally created.
+      - name: created_by
+        description: Identifier of the user or system that created the order.
+      - name: dbt_loaded_at
+        description: Timestamp when the record was pulled into the intermediate view from staging.
+      - name: load_id
+        description: Unique dbt invocation identifier for traceability.
+
+
+  # ==================================================================================
+  # INT_ORDER_ITEMS_CURRENT
+  # ==================================================================================
+  - name: int_order_items_current
+    description: >
+      Intermediate model representing individual products within customer orders.
+    columns:
+      - name: order_item_id
+        description: Unique identifier for the order line item.
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: Identifier linking the item to its parent order.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_orders_current')
+              field: order_id
+      - name: product_id
+        description: Identifier linking the item to the product catalog.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+      - name: order_quanity
+        description: Number of units of the product in this order item.
+        tests:
+          - not_null
+      - name: customer_id
+        description: Customer identifier inherited from the order for analytics context.
+      - name: order_date
+        description: Order creation date inherited from order-level context.
+      - name: order_status_category
+        description: Normalized order status category inherited from order-level context.
+      - name: is_completed
+        description: Boolean flag inherited from order-level context indicating completion.
+      - name: is_pending
+        description: Boolean flag inherited from order-level context indicating pending state.
+      - name: is_processing
+        description: Boolean flag inherited from order-level context indicating processing state.
+      - name: updated_at
+        description: Timestamp of last update at order-item level.
+      - name: updated_by
+        description: User or system that last updated the order item.
+      - name: created_at
+        description: Timestamp when the order item was created.
+      - name: created_by
+        description: User or system that created the order item.
+      - name: dbt_loaded_at
+        description: Timestamp when the record was pulled into the intermediate view from staging.
+      - name: load_id
+        description: Unique dbt invocation identifier for traceability.

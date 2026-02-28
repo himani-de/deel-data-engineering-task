@@ -9,7 +9,7 @@
 {{
     config(
         materialized="view",
-        tags=["incremental", "view", "order_item"]
+        tags=["intermediate", "view", "order_item"]
     )
 }}
 
