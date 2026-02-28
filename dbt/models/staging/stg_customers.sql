@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------------------------------------------------------
 -- Description: staging layer to collect raw customer data and deduplicate from products source
--- grain: 1 row per customer, updated at
+-- grain: 1 row per customer
 --  primary_key: customer_id
 -- Incremental watermark: updated_at(lookback:2 hrs for low latency but can be updated in future if needed to reduce the latency
 -- purpose: no business logic, raw mapping from source, cast/renaming for more clear business context and deduplication
@@ -33,9 +33,9 @@ with raw_customers as (
 
     {% if is_incremental() %}
         where updated_at >= (
-            select max(updated_at) - interval '2 hour'
+            scoalesce(max(updated_at), '1900-01-01'::timestamp)
             from {{ this }}
-        )
+        ) - interval '2 hour'
     {% else %}
     -- full refresh: backfill last 2 years
         where updated_at >= {{ backfill_twoyears_date() }}
@@ -44,7 +44,17 @@ with raw_customers as (
   ),
 
 dedup_customers as (
-    select *
+    select
+        customer_id,
+        customer_name,
+        customer_status,
+        customer_address,  -- if considered as customer sensitive data, need to hash this column
+        updated_at,
+        updated_by,
+        created_at,
+        created_by,
+        dbt_loaded_at,
+        load_id
     from (
         select
             *,

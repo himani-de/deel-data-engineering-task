@@ -1,0 +1,186 @@
+version: 2
+
+models:
+
+  # ----------------------------------------------------------------------------------
+  # STG_PRODUCTS
+  # ----------------------------------------------------------------------------------
+  - name: stg_products
+    description: >
+      Staging model for products source table.
+      This model reflects the latest known operational state of each product and serves as the foundational dataset for
+      product demand, backlog, and fulfillment reporting.
+    columns:
+      - name: product_id
+        description: Unique identifier for a product.
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: Commercial name of the product used in reporting and customer-facing systems.
+        tests:
+          - not_null
+      - name: product_barcode
+        description: Barcode identifier used for warehouse scanning and inventory control.
+      - name: product_unit_price
+        description: Unit price of the product.
+      - name: product_status
+        description: Indicates whether the product is active and available for ordering.
+      - name: updated_at
+        description: Timestamp of the most recent operational update to the product record.
+        tests:
+          - not_null
+      # operational metadata
+      - name: updated_by
+        description: Identifier of the user or system that last modified the product record.
+      - name: created_at
+        description: Timestamp when the product was originally created in the source system.
+      - name: created_by
+        description: Identifier of the user or system that created the product record.
+     # dbt audit columns
+      - name: dbt_loaded_at
+        description: Timestamp when the record was ingested into the analytics platform by dbt.
+        tests:
+          - not_null
+
+      - name: load_id
+        description: Unique dbt invocation identifier used for traceability and debugging of data loads.
+
+  # ----------------------------------------------------------------------------------
+  # STG_CUSTOMERS
+  # ----------------------------------------------------------------------------------
+  - name: stg_customers
+    description: >
+      representing customers placing logistics orders.
+      This dataset supports customer-level operational reporting,
+      including pending orders and order volume analysis.
+    columns:
+      - name: customer_id
+        description: Unique identifier for a customer.
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: Registered name of the customer.
+        tests:
+          - not_null
+      - name: customer_address
+        description: Primary delivery address associated with the customer.
+      - name: customer_status
+        description: Indicates whether the customer account is currently active.
+      - name: updated_at
+        description: Timestamp of the most recent update to the customer record.
+        tests:
+        - not_null
+      - name: updated_by
+        description: Identifier of the user or system that last updated the customer.
+      - name: created_at
+        description: Timestamp when the customer record was created.
+      - name: created_by
+        description: Identifier of the user or system that created the record.
+      - name: dbt_loaded_at
+        description: Timestamp when the record was loaded into the analytics platform.
+        tests:
+          - not_null
+      - name: load_id
+        description: Unique dbt invocation identifier for auditing
+
+  # ----------------------------------------------------------------------------------
+  # STG_ORDERS
+  # ----------------------------------------------------------------------------------
+  - name: stg_orders
+    description: >
+      Staging representation of customer orders within the logistics system.
+      Each record reflects the latest operational state of an order,
+      including delivery scheduling and fulfillment status.
+
+    columns:
+      - name: order_id
+        description: Unique identifier for an order.
+        tests:
+          - not_null
+          - unique
+      - name: order_date
+        description: Date when the order was created in the operational system.
+        tests:
+          - not_null
+      - name: delivery_date
+        description: Date when the order is expected to be deliver.
+        tests:
+            - not_null
+      - name: customer_id
+        description: Identifier linking the order to the customer who placed it.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: order_status
+        description: Current status of the order (completed, pending, processing, etc).
+        tests:
+          - not_null
+      - name: updated_at
+        description: Timestamp of the latest update to the order.
+        tests:
+          - not_null
+      - name: updated_by
+        description: Identifier of the user or system that last modified the order.
+      - name: created_at
+        description: Timestamp when the order was created.
+      - name: created_by
+        description: Identifier of the user or system that created the order.
+      - name: dbt_loaded_at
+        description: Timestamp when the order record was ingested into analytics.
+        tests:
+          - not_null
+      - name: load_id
+        description: Unique dbt invocation identifier for debugging and traceability.
+
+  # ----------------------------------------------------------------------------------
+  # STG_ORDER_ITEMS
+  # ----------------------------------------------------------------------------------
+  - name: stg_order_items
+    description: >
+      Staging model representing individual products within customer orders.
+      Each record corresponds to a single product line within an order.
+    columns:
+      - name: order_item_id
+        description: Unique identifier for order item.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        description: Identifier linking the item to its parent order.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: product_id
+        description: Identifier linking the item to the product catalog.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+      - name: order_quanity
+        description: Number of units of the product ordered.
+        tests:
+          - not_null
+      - name: updated_at
+        description: Timestamp of the most recent update to the order item record.
+        tests:
+          - not_null
+      - name: updated_by
+        description: Identifier of the user or system that last updated the order item.
+      - name: created_at
+        description: Timestamp when the order item was created.
+      - name: created_by
+        description: Identifier of the user or system that created the order item.
+      - name: dbt_loaded_at
+        description: Timestamp when the record was loaded into the analytics platform.
+        tests:
+          - not_null
+      - name: load_id
+        description: Unique dbt invocation identifier for auditing and traceability.

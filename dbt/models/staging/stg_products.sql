@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------------------------------------------------------
 -- Description: staging layer to collect raw product data and deduplicate from products source
--- grain: 1 row per product, updated at
+-- grain: 1 row per product_id
 --  primary_key: product_id
 -- Incremental watermark: updated_at(lookback:2 hrs for low latency but can be updated in future if needed to reduce the latency
 -- purpose: no business logic, raw mapping from source, cast/renaming for more clear business context and deduplication
@@ -22,7 +22,7 @@ with raw_products as (
         product_id,
         product_name,
         barcode as product_barcode,
-        unity_price as product_unity_price,
+        unity_price as product_unit_price,
         is_active as product_status,
         updated_at,
         updated_by,
@@ -34,9 +34,9 @@ with raw_products as (
 
     {% if is_incremental() %}
         where updated_at >= (
-            select max(updated_at) - interval '2 hour'
+            coalesce(max(updated_at), '1900-01-01'::timestamp)
             from {{ this }}
-        )
+           ) - interval '2 hour'
     {% else %}
     -- full refresh: backfill last 2 years
         where updated_at >= {{ backfill_twoyears_date() }}
@@ -45,18 +45,30 @@ with raw_products as (
   ),
 
 dedup_products as (
-    select *
+
+    select
+        product_id,
+        product_name,
+        product_barcode,
+        product_unit_price,
+        product_status,
+        updated_at,
+        updated_by,
+        created_at,
+        created_by,
+        dbt_loaded_at,
+        load_id
+
     from (
         select
             *,
             row_number() over (
                 partition by product_id
                 order by updated_at desc nulls last,
-                dbt_loaded_at desc
+                         dbt_loaded_at desc
             ) as rn
         from raw_products
     ) p
-    WHERE rn = 1
+    where rn = 1
 )
-
 select * from dedup_products

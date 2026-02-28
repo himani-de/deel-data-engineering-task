@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------------------------------------------------------
 -- Description: staging layer to collect raw order items data and deduplicate from products source
--- grain: 1 row per order id, updated at
+-- grain: 1 row per order item
 --  primary_key: order_item_id
 -- Incremental watermark: updated_at(lookback:2 hrs for low latency but can be updated in future if needed to reduce the latency
 -- purpose: no business logic, raw mapping from source, cast/renaming for more clear business context and deduplication
@@ -33,9 +33,9 @@ with raw_order_items as (
 
     {% if is_incremental() %}
         where updated_at >= (
-            select max(updated_at) - interval '2 hour'
+            coalesce(max(updated_at), '1900-01-01'::timestamp)
             from {{ this }}
-        )
+        ) - interval '2 hour'
     {% else %}
     -- full refresh: backfill last 2 years
         where updated_at >= {{ backfill_twoyears_date() }}
@@ -44,7 +44,17 @@ with raw_order_items as (
   ),
 
 dedup_order_items as (
-    select *
+    select
+        order_item_id,
+        order_id,
+        product_id,
+        order_quanity,
+        updated_at,
+        updated_by,
+        created_at,
+        created_by,
+        dbt_loaded_at,
+        load_id
     from (
         select
             *,
