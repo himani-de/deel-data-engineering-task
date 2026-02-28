@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------------------------------------------------------
--- Description: staging layer to collect raw order data and deduplicate from orders source
--- grain: 1 row per order, updated at
---  primary_key: order_id
+-- Description: staging layer to collect raw product data and deduplicate from products source
+-- grain: 1 row per product, updated at
+--  primary_key: product_id
 -- Incremental watermark: updated_at(lookback:2 hrs for low latency but can be updated in future if needed to reduce the latency
 -- purpose: no business logic, raw mapping from source, cast/renaming for more clear business context and deduplication
 ---------------------------------------------------------------------------------------------------------------------*/
@@ -15,19 +15,20 @@
 
 /*********************************** source query **********************************************************************/
 
-with raw_orders as (
+with raw_products as (
     select
-        order_id,
-        order_date,
-        customer_id,
-        status as order_status,
+        product_id,
+        product_name,
+        barcode as product_barcode,
+        unity_price as product_unity_price,
+        is_active as product_status,
         updated_at,
         updated_by,
         created_at,
         created_by,
         -- audit
         {{ load_info() }}
-    from {{ source("customer_orders", "orders") }}
+    from {{ source("customer_orders", "products") }}
 
     {% if is_incremental() %}
         where updated_at >= (
@@ -38,21 +39,21 @@ with raw_orders as (
     -- full refresh: backfill last 2 years
         where updated_at >= {{ backfill_twoyears_date() }}
     {% endif %}
-        and order_id is not null
+        and product_id is not null
   ),
 
-dedup_orders as (
+dedup_products as (
     select *
     from (
         select
             *,
             row_number() over (
-                partition by order_id
+                partition by product_id
                 order by updated_at desc
             ) as rn
-        from raw_orders
-    ) o
-    where rn = 1
+        from raw_products
+    ) p
+    WHERE rn = 1
 )
 
-select * from dedup_orders
+select * from dedup_products

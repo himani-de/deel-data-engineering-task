@@ -26,7 +26,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # model configuration
 models:
   customer_order_tracking:
-    +persist_docs: ['relation' , 'columns']
+    +persist_docs:
+      relation: true
+      columns: true
     staging:
       +schema: staging
     intermediate:

@@ -1,11 +1,13 @@
 db-data/
 # dbt compiled directories
-/target/
-/run/
-/logs/
+target/
+run/
+*.logs/
 
 # dbt package dependencies
-/dbt_packages/
+dbt_packages/
+logs/
+compiled/
 
 # Local environment / IDE files
 *.pyc
