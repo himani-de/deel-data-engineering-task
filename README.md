@@ -112,7 +112,7 @@ docker run -d \
 ```
 ## check endpoint
 ```
-curl -H "x-api-key: mysecretapikey" http://127.0.0.1:8000/analytics/orders
+curl -H "x-api-key: mysecretapikey" http://127.0.0.1:3000/analytics/orders
 ```
 
 ##Troubleshooting
