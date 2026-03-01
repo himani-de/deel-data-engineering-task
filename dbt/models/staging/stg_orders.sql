@@ -34,9 +34,9 @@ with raw_orders as (
 
     {% if is_incremental() %}
         where updated_at >= (
-            coalesce(max(updated_at), '1900-01-01'::timestamp)
-            from {{ this }}
-        ) - interval '2 hour'
+            select coalesce(max(updated_at), '1900-01-01'::timestamp) - interval '2 hour'
+        from {{ this }}
+    )
     {% else %}
     -- full refresh: backfill last 2 years
         where updated_at >= {{ backfill_twoyears_date() }}

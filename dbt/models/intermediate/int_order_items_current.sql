@@ -20,10 +20,12 @@ select
   -- Order-level status context on each item row
   o.customer_id,
   o.order_date,
+  o.delivery_date,
   o.order_status_category,
   o.is_completed,
   o.is_pending,
-  o.is_processing
+  o.is_processing,
+  o.is_open
 
 from {{ ref('stg_order_items') }} i
 left join {{ ref('int_orders_current') }} o
