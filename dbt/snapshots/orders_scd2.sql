@@ -28,6 +28,7 @@ select
     order_date,
     delivery_date,
     order_status,
+    {{ order_status_fields('order_status') }},   -- include category + flags
     updated_at,
     updated_by,
     created_at,
