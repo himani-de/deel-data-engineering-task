@@ -116,9 +116,7 @@ curl -H "x-api-key: mysecretapikey" http://127.0.0.1:3000/analytics/orders
 ```
 
 ##Troubleshooting
- -- DB connection errors: Ensure Postgres is running, .env credentials are correct.
-
- -- Endpoints return empty results: Check your fact_orders and fact_order_items tables for relevant is_open / is_pending rows.
-
- -- Docker errors: Make sure ports are free and .env is correctly passed.
+ - DB connection errors: Ensure Postgres is running, .env credentials are correct.
+ - Endpoints return empty results: Check your fact_orders and fact_order_items tables for relevant is_open / is_pending rows.
+ - Docker errors: Make sure ports are free and .env is correctly passed.
 
