@@ -87,7 +87,7 @@ models:
   # ---------------------------------------------------------
   # Dim: customer
   # ---------------------------------------------------------
-  - name: dim_customer
+  - name: dim_customers
     description: >
       Dimension table for customers.
       Centralizes metadata and status in business-friendly form ('active'/'inactive').
@@ -118,7 +118,7 @@ models:
   # ---------------------------------------------------------
   # Dim: product
   # ---------------------------------------------------------
-  - name: dim_product
+  - name: dim_products
     description: >
       Dimension table for products.
       Centralizes product metadata with business-friendly naming.

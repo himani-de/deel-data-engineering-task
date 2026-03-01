@@ -50,6 +50,7 @@ This API exposes KPIs from the `dev_mart` schema in PostgreSQL:
 ```
 
 ##Setup & Run Locally
+ - Fork the original repo and add these files
 ### Create a virtual environment:
 ```
 python -m venv venv
@@ -59,6 +60,26 @@ source venv/bin/activate  # Mac/Linux
 ```
 pip install -r requirements.txt
 ```
+
+### run dbt models
+ - for local dbt run create a local profile yml that will be in your machine and not exposed to outside world to keep the sensitive credentials safe
+ - install dbt-core and postgres adaptar
+ - dbt debug(if everything is fine with setup)
+ - Run a single model
+    ```
+    dbt run --select stg_orders 0--target dev
+    ```
+ - Run all models with a tag
+   ````
+   dbt run --select 'tag:stg' --target:dev
+   ```
+ - Generate and serve docs locally
+    ```dbt docs generate```
+    ```dbt docs serve```
+ This is how the dbt lineage will look like on dbt docs
+ ![dbt-customer_order_tracking-lineage](diagrams/dbt/dbt-lineage.png)
+ 
+ This is how you can run all other models to create/update tables in postgres db.
 ### Create .env file:
 ```
 DB_HOST=127.0.0.1
