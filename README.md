@@ -91,7 +91,8 @@ DB_NAME=dev_mart
 API_KEY=mysecretapikey
 ```
 ### Run the API locally:
-```commandline
+```
+cd analytics-api/app
 uvicorn main:app --reload --port 3000
 ```
 ### Test endpoints:
@@ -100,14 +101,19 @@ curl -H "x-api-key: mysecretapikey" http://127.0.0.1:3000/analytics/orders
 ```
 ## Docker Deployment
 ```
+cd analytics-api/
 docker build -t analytics-api:v1.0 .
 ```
 ## run docker container
+- update your actual credentials in below command
 ```
-docker run -d \
-  --name analytics-api \
-  -p 3000:3000 \
-  --env-file .env \
+docker run --rm -p 3000:3000 \
+  -e DB_HOST=host.docker.internal \
+  -e DB_PORT=5432 \
+  -e DB_USER=postgres \       
+  -e DB_PASSWORD=postgres \
+  -e DB_NAME=postgres \
+  -e API_KEY=mysecretapikey \
   analytics-api:v1.0
 ```
 ## check endpoint
