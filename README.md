@@ -106,7 +106,7 @@ docker build -t analytics-api:v1.0 .
 ```
 docker run -d \
   --name analytics-api \
-  -p 8000:8000 \
+  -p 3000:3000 \
   --env-file .env \
   analytics-api:v1.0
 ```
