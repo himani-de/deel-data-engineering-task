@@ -38,6 +38,7 @@ This API exposes KPIs from the `dev_mart` schema in PostgreSQL:
 ---
 
 ## Project Structure
+```
  analytics_api
 |-- app
 |   |-- auth.py      # API key authentication logic
@@ -46,6 +47,7 @@ This API exposes KPIs from the `dev_mart` schema in PostgreSQL:
 |   |-- queries.py   # SQL queries for all KPIs
 |-- Dockerfile       # SQL queries for all KPIs
 `-- requirements.txt # Python dependencies
+```
 
 ##Setup & Run Locally
 ### Create a virtual environment:
