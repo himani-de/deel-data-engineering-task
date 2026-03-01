@@ -51,6 +51,7 @@ This API exposes KPIs from the `dev_mart` schema in PostgreSQL:
 
 ##Setup & Run Locally
  - Fork the original repo and add these files
+
 ### Create a virtual environment:
 ```
 python -m venv venv
@@ -67,7 +68,7 @@ pip install -r requirements.txt
  - dbt debug(if everything is fine with setup)
  - Run a single model
     ```
-    dbt run --select stg_orders 0--target dev
+    dbt run --select stg_orders --target dev
     ```
  - Run all models with a tag
    ````
