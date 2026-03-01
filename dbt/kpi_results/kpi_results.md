@@ -67,8 +67,7 @@ from ranked_dates
 where rnk <= 3
 order by num_open_orders desc, delivery_date desc
 ```
-## 5. Number of open pending items by PRODUCT_ID, this information can be queried using
-the order status and the order items
+## 5. Number of open pending items by PRODUCT_ID
 ```
 select
     product_id,
