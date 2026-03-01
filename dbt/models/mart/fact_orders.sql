@@ -12,6 +12,9 @@
 --   - Current-state analytical table
 --   - Snapshot (orders_scd2) handles historical tracking
 --   - Safe for aggregation (no SCD duplication risk)
+--   - Keeps intermediate metadata for debugging:
+--       - created_at, created_by
+--       - updated_at, updated_by
 *****************************************************************************************/
 
 {{
@@ -21,6 +24,8 @@
     )
 }}
 
+/*********************************** source query **********************************************************************/
+
 select
     order_id,
     customer_id,
@@ -29,5 +34,9 @@ select
     order_status_category,
     is_pending,
     is_completed,
-    is_processing
+    is_processing,
+    created_at,
+    created_by,
+    updated_at,
+    updated_by
 from {{ ref('int_orders_current') }}

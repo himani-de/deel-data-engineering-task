@@ -14,6 +14,9 @@
 --   Enables product-level aggregation
 --   Can join to fact_orders for order-level filtering
 --   Supports future revenue metrics
+--   - Keeps intermediate metadata for debugging:
+--       - created_at, created_by
+--       - updated_at, updated_by
 *****************************************************************************************/
 
 {{
@@ -22,6 +25,8 @@
         tags=['mart','fact']
     )
 }}
+
+/*********************************** source query **********************************************************************/
 
 select
     order_item_id,
@@ -33,5 +38,9 @@ select
     is_completed,
     is_pending,
     is_processing,
-    is_open
+    is_open,
+    created_at,
+    created_by,
+    updated_at,
+    updated_by
 from {{ ref('int_order_items_current') }}

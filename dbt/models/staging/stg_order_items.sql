@@ -2,16 +2,14 @@
 -- Description: staging layer to collect raw order items data and deduplicate from products source
 -- grain: 1 row per order item
 --  primary_key: order_item_id
--- Incremental watermark: updated_at(lookback:2 hrs for low latency but can be updated in future if needed to reduce the latency
 -- purpose: no business logic, raw mapping from source, cast/renaming for more clear business context and deduplication
+-- logic: last 2 hours for low-latency refresh, full backfill for initial load
 ---------------------------------------------------------------------------------------------------------------------*/
 
 {{
     config(
-        materialized="incremental",
-        incremental_strategy="merge",
-        unique_key="order_item_id",
-        tags=["staging"]
+        materialized="table",
+        tags=["staging", "order_item"]
     )
 }}
 
@@ -30,18 +28,16 @@ with raw_order_items as (
         -- audit
         {{ load_info() }}
     from {{ source("customer_orders", "order_items") }}
+    where order_item_id is not null
 
-    {% if is_incremental() %}
-        where updated_at >= (
-            select coalesce(max(updated_at), '1900-01-01'::timestamp) - interval '2 hour'
-        from {{ this }}
-    )
+    {% if flags.FULL_REFRESH -%}
+     -- full refresh: backfill last 2 years
+       and updated_at >= {{ backfill_twoyears_date() }}
     {% else %}
-    -- full refresh: backfill last 2 years
-        where updated_at >= {{ backfill_twoyears_date() }}
+   -- normal run: last 2 hours only
+       and updated_at >= current_timestamp - interval '2 hour'
     {% endif %}
-        and order_item_id is not null
-  ),
+),
 
 dedup_order_items as (
     select

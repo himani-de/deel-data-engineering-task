@@ -1,9 +1,10 @@
 /****************************************************************************************
--- Model: dim_customer
--- Grain: 1 row per customer_id
+-- Model: dim_products
+-- Grain: 1 row per product_id
 -- Purpose:
---   - Centralizes customer metadata (name, address, status)
---   - Supports future analytics and BI reporting without duplicating info in facts
+--   - Centralizes product metadata (name, barcode, price, status)
+--   - Provides consistent descriptive info for reporting and future metrics
+--   - Avoids storing descriptive info repeatedly in fact tables
 --   - Keeps staging metadata for debugging:
 --       - created_at, created_by
 --       - updated_at, updated_by
@@ -12,22 +13,19 @@
 {{
     config(
         materialized='table',
-        tags=['dim','customer']
+        tags=['dim','product']
     )
 }}
 
 /*********************************** source query **********************************************************************/
-
-select
-    customer_id,
-    customer_name,
-    customer_address,
-    case
-        when customer_status = true then 'active'
-    else 'inactive'
-    end as customer_status,
+select distinct
+    product_id,
+    product_name,
+    product_barcode,
+    product_unit_price,
+    product_status,
     created_at,
     created_by,
     updated_at,
     updated_by
-from {{ ref('stg_customers') }}
+from {{ ref('stg_products') }}
