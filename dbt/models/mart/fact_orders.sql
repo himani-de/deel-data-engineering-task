@@ -35,6 +35,7 @@ select
     is_pending,
     is_completed,
     is_processing,
+    is_open,
     created_at,
     created_by,
     updated_at,
