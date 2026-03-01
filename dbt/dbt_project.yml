@@ -35,8 +35,6 @@ models:
       +schema: intermediate
     mart:
       +schema: mart
-    access_views:
-      +schema: access_views
 
 flags:
   mute_ensure_materialization_override: true

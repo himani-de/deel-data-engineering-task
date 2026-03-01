@@ -76,5 +76,6 @@ Designed the pipeline in **three main layers**:
   - Requires careful management of incremental merges  
 
 ## Future Scope
-## diagram to be updated
-## there are potential pii data like customer_name, address and can be hashed to store in warehouse tables.
+  - diagram to be updated
+  - There are potential pii data like customer_name, address and can be hashed to store in warehouse tables.
+  - The access management will be designed accordingly to the pii data to stakeholders.
