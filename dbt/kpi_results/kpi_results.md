@@ -22,7 +22,7 @@ select
 from fact_orders
 ```
 ## 2. historical Order State (snapshot orders scd2)
-````
+```
 select
     order_id,
     order_status,            -- raw source status
