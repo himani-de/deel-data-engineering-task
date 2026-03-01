@@ -1,0 +1,179 @@
+version: 2
+
+models:
+
+  # ---------------------------------------------------------
+  # Fact: order-level metrics
+  # ---------------------------------------------------------
+  - name: fact_orders
+    description: >
+      Fact table at the order-grain.
+      One row per order_id capturing current business metrics.
+      Used for order-level KPIs such as open orders by delivery_date and status.
+    columns:
+      - name: order_id
+        description: Unique identifier for the order.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Customer who placed the order.
+        tests:
+          - not_null
+      - name: delivery_date
+        description: Date when the order is scheduled to be delivered.
+        tests:
+          - not_null
+      - name: order_status_category
+        description: Normalized status category for the order (completed/pending/processing).
+        tests:
+          - not_null
+      - name: is_completed
+        description: Boolean flag indicating if the order is completed.
+      - name: is_pending
+        description: Boolean flag indicating if the order is pending.
+      - name: is_processing
+        description: Boolean flag indicating if the order is processing.
+      - name: is_open
+        description: Boolean flag indicating if the order is still open.
+      - name: order_date
+        description: Original order placement date.
+        tests:
+          - not_null
+
+  # ---------------------------------------------------------
+  # Fact: order-item level metrics
+  # ---------------------------------------------------------
+  - name: fact_order_items
+    description: >
+      Fact table at the order-item-grain.
+      One row per order_item_id capturing product-level metrics.
+      Supports KPIs like number of open pending items per product, order-level filtering, and revenue calculations.
+    columns:
+      - name: order_item_id
+        description: Unique identifier for the order item.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        description: Reference to parent order.
+        tests:
+          - not_null
+      - name: product_id
+        description: Product associated with this item.
+        tests:
+          - not_null
+      - name: customer_id
+        description: Customer who placed the order.
+        tests:
+          - not_null
+      - name: delivery_date
+        description: Date when this item is scheduled to be delivered.
+        tests:
+          - not_null
+      - name: order_status_category
+        description: Order-level status category.
+        tests:
+          - not_null
+      - name: is_completed
+        description: Boolean flag indicating if the order is completed.
+      - name: is_pending
+        description: Boolean flag indicating if the order is pending.
+      - name: is_processing
+        description: Boolean flag indicating if the order is processing.
+      - name: is_open
+        description: Boolean flag indicating if the order is still open.
+
+  # ---------------------------------------------------------
+  # Dim: customer
+  # ---------------------------------------------------------
+  - name: dim_customer
+    description: >
+      Dimension table for customers.
+      Centralizes metadata and status in business-friendly form ('active'/'inactive').
+      Includes source-created timestamps for audit/reference.
+    columns:
+      - name: customer_id
+        description: Unique customer identifier.
+        tests:
+          - not_null
+          - unique
+      - name: customer_name
+        description: Customer's full name.
+        tests:
+          - not_null
+      - name: customer_address
+        description: Rgisstred customer address.
+      - name: customer_status
+        description: active or inactive, derived from source boolean is_active.
+      - name: created_at
+        description: Customer creation timestamp from source.
+      - name: created_by
+        description: Source system user who created the record.
+      - name: updated_at
+        description: Timestamp of last update in source system.
+      - name: updated_by
+        description: Source system user who last updated the record.
+
+  # ---------------------------------------------------------
+  # Dim: product
+  # ---------------------------------------------------------
+  - name: dim_product
+    description: >
+      Dimension table for products.
+      Centralizes product metadata with business-friendly naming.
+      Includes source-created timestamps for reference and audit.
+    columns:
+      - name: product_id
+        description: Unique product identifier.
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: Name of the product.
+      - name: product_barcode
+        description: Product barcode.
+      - name: product_unit_price
+        description: Unit price of the product.
+      - name: product_status
+        description: active or inactive, derived from source is_active.
+      - name: created_at
+        description: Product creation timestamp from source.
+      - name: created_by
+        description: Source user who created the product.
+      - name: updated_at
+        description: Timestamp of last update in source.
+      - name: updated_by
+        description: Source user who last updated the product.
+
+  # ---------------------------------------------------------
+  # Dim: date
+  # ---------------------------------------------------------
+  - name: dim_date
+    description: >
+      Calendar dimension table.
+      Provides consistent day-level attributes (year, month, quarter, weekday, weekend) 
+      to support time-based joins and aggregations across fact tables.
+      Helps with scalable future KPIs and consistent BI reporting.
+    columns:
+      - name: calendar_date
+        description: Unique date.
+        tests:
+          - unique
+          - not_null
+      - name: year
+        description: Calendar year.
+      - name: month
+        description: Month number.
+      - name: day
+        description: Day of month.
+      - name: weekday_name
+        description: Name of the weekday.
+      - name: is_weekend
+        description: True if date is Saturday or Sunday.
+      - name: month_start
+        description: Start of month.
+      - name: quarter_start
+        description: Start of quarter.
+      - name: year_start
+        description: Start of year.

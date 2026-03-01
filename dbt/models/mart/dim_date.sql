@@ -31,4 +31,4 @@ select
     date_trunc('month', d) as month_start,
     date_trunc('quarter', d) as quarter_start,
     date_trunc('year', d) as year_start
-from generate_series('2020-01-01'::date, current_date + interval '2 year', interval '1 day') as t(d);
+from generate_series('2020-01-01'::date, current_date + interval '2 year', interval '1 day') as t(d)
